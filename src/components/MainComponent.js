@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import {Container, Row} from 'reactstrap';
 import Menu from "./MenuComponent";
 import DishDetail from "./DishdetailComponent";
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
+import Contact from './ContactComponent';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import { DISHES } from "../shared/dishes.js";
+import { COMMENTS } from "../shared/comments.js";
+import { LEADERS } from "../shared/leaders.js";
+import { PROMOTIONS} from "../shared/promotions.js";
 
 class Main extends Component {
   constructor(props) {
@@ -14,6 +17,9 @@ class Main extends Component {
 
     this.state = {
       dishes: DISHES,
+      comments: COMMENTS,
+      promotions: PROMOTIONS,
+      leaders: LEADERS
     };
   }
 
@@ -21,7 +27,11 @@ class Main extends Component {
 
     const HomePage = () => {
       return(
-        <Home />
+        <Home 
+          dish={this.state.dishes.filter((dish) => dish.featured === true)[0]}
+          promo={this.state.promotions.filter((promo) => promo.featured === true)[0]}
+          leader={this.state.leaders.filter((leader) => leader.featured === true)[0]}  
+        />
       );
     }
 
@@ -31,6 +41,7 @@ class Main extends Component {
         <Switch>
           <Route path="/home" component={HomePage} />
           <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} />
+          <Route exact path="/contactus" component={Contact} /> 
           <Redirect to="/home" />
         </Switch>
         <Footer />
