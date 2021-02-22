@@ -1,0 +1,93 @@
+.row-header {
+    margin: 0px auto;
+    padding: 0 0; }
+  
+  .row-content {
+    margin: 0px auto;
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 400px; }
+  
+  .footer {
+    margin: 0px auto;
+    padding: 20px 0;
+    background-color: #414141;
+    color: floralwhite; }
+    .footer .copyright {
+      font-size: 75%;
+      padding: 20px 0 0 0;
+      color: #afafaf; }
+    .footer .social-media {
+      color: #e6e6e6; }
+  
+  .jumbotron {
+    margin: 0px auto;
+    padding: 70px 30px;
+    background: #9575cd;
+    color: floralwhite; }
+  
+  address {
+    font-size: 80%;
+    margin: 0px;
+    color: #dbdbdb; }
+    address a {
+      color: #d1d1d1;
+      text-decoration: none; }
+    address a:hover {
+      color: #d1d1d1;
+      text-decoration: none; }
+  
+  .navbar-dark {
+    background-color: #5a325a; }
+  
+  .foot-nav a {
+    color: #d1d1d1;
+    text-decoration: none; }
+  
+  .btn-group {
+    padding: 15px 0; }
+  
+  .card-header {
+    background-color: #402d64; }
+    .card-header a {
+      text-decoration: none;
+      color: white; }
+    .card-header a:hover {
+      text-decoration: none;
+      color: white; }
+  
+  .quote {
+    padding: 20px 0; }
+  
+  .tab-content {
+    border: 1px solid floralwhite;
+    border-top: none;
+    padding: 10px; }
+  
+  .carousel {
+    background-color: #5a325a; }
+    .carousel .carousel-item {
+      height: 300px; }
+      .carousel .carousel-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 300px; }
+  
+  #carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1; }
+  
+  .modal-header {
+    background: #5a325a;
+    color: floralwhite; }
+    .modal-header button {
+      color: floralwhite; }
+    .modal-header button:hover {
+      color: floralwhite; }
+  
+  .modal-body {
+    background: #ede3fd; }
+  

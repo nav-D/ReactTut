@@ -3,22 +3,19 @@ import { Card, CardImg, CardImgOverlay,CardBody, CardText, CardTitle, Row } from
 
 function RenderMenuItem({dish, onClick}) {
   return (
-    <div key={dish.id}>
-      <Card onClick = {() => onClick(dish.id)}>
+      <Card  onClick = {() => onClick(dish.id)}>
           <CardImg width="100%" src={dish.image} alt={dish.name}/>  
           <CardImgOverlay>
               <CardTitle><h4>{dish.name}</h4></CardTitle>
           </CardImgOverlay>
       </Card>
-    </div>
-
   );
 }
   
 const Menu = (props) => {
   const menu = props.dishes.map((dish) => {
     return (
-        <div className="col-12 col-md-5 m-1">
+        <div  key={dish.id} className="col-12 col-md-5 m-1">
           <RenderMenuItem dish={dish} onClick={props.onClick} />
         </div> 
       );
