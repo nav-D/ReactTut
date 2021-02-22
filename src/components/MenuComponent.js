@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardImg, CardImgOverlay,CardBody, CardText, CardTitle, Row } from "reactstrap";
+import { Card, CardImg, CardImgOverlay,CardBody, CardText, CardTitle,Container, Row } from "reactstrap";
 
 function RenderMenuItem({dish, onClick}) {
   return (
@@ -22,9 +22,11 @@ const Menu = (props) => {
   });
 
   return (
-    <Row>
-        {menu}
-    </Row>
+    <Container>
+        <Row>
+          {menu}
+        </Row>
+    </Container>
   );
 }
 
